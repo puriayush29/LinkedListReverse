@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-public class LinkedList1 extends Exception{
+public class LinkedList1 {
   
     static private Node head;
     class Node
@@ -8,11 +8,10 @@ public class LinkedList1 extends Exception{
         private int value;
         private Node next;
     }
-    public LinkedList1(int item)
+    public LinkedList1()
     {
-        head = new Node();
-        head.value = item;
-        head.next = null;
+//        head = new Node();
+//        head.next = null;
     }
     public boolean insertBeg(int item)
     {
@@ -39,8 +38,8 @@ public class LinkedList1 extends Exception{
             System.out.println(z5.value);
         }
     }
-    public static void main(String[] args) {
-          LinkedList1 obj1 = new LinkedList1(6);
+    public static void main(String[] args) throws InstantiationException,IllegalAccessException {
+          LinkedList1 obj1 = LinkedList1.class.newInstance();
             Scanner input = new Scanner(System.in);
             System.out.println("Enter the number of elements you want to insert in linked list:");
             int size = input.nextInt();
